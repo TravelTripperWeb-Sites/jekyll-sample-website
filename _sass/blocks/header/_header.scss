@@ -1,0 +1,23 @@
+$header-height: 58px;
+$logotype-width: 240px;
+$social-icons-width: 240px;
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  transition: all .4s;
+  @extend .clearfix;
+
+  &.-sticky {
+    background: #000;
+  }
+}
+
+.header_container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @extend .clearfix;
+}

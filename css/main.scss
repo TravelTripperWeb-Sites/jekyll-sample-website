@@ -4,4 +4,18 @@
 @charset "utf-8";
 @import "normalize";
 @import "typo";
+@import "helpers";
 @import "responsive";
+
+// Header ----------------------------------------------------------------------
+@import "blocks/header/header";
+@import "blocks/header/logotype";
+@import "blocks/header/social-icons";
+@import "blocks/header/main-menu";
+@import "blocks/header/hamburger";
+
+// Wellcome --------------------------------------------------------------------
+@import "blocks/wellcome/wellcome";
+
+// Footer ----------------------------------------------------------------------
+@import "blocks/footer/footer";

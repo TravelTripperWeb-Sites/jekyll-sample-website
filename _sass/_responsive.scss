@@ -1,1 +1,34 @@
-// Grid and media-query helpers
+// Use: @include respond-to("mobile") { some: code here; }
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media only screen and (max-width : 767px) { @content; }
+  }
+  @else if $breakpoint == "tablet" {
+    @media only screen and (min-width : 768px) and (max-width : 1024px) { @content; }
+  }
+  @else if $breakpoint == "desktop" {
+    @media only screen and (min-width : 1224px)  { @content; }
+  }
+}
+
+// Grid
+// $columns: 12;
+// $one-col: 100% / 12;
+//
+// @while $columns > 0 {
+//   .col-#{$columns} {
+//     float: left;
+//     width: $one-col * $columns;
+//     box-sizing: border-box;
+//   }
+//   $columns: $columns - 1;
+// }
+
+// Use: @include columns(4); // width: 33.3333%
+// Column count default to: 12.
+@mixin columns($count, $columns: 12) {
+  $one-column: 100% / $columns;
+
+  float: left;
+  width: $one-column * $count;
+}
