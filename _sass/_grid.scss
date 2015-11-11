@@ -1,0 +1,49 @@
+$grid-columns: 12;
+$grid-one-column: 100% / 12;
+$grid-gutter: 30px;
+$device: (
+  mobile: 'mob',
+  tablet: 'tab',
+  desktop: 'desk',
+  wide: 'wide'
+);
+
+.row {
+  width: 100%;
+  @extend .clearfix;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: $grid-gutter / 2;
+  padding-right: $grid-gutter / 2;
+  box-sizing: border-box;
+}
+
+// Default columns [.col-12]
+$i: $grid-columns;
+@while $i > 0 {
+  .col-#{$i} {
+    width: $i * $grid-one-column;
+  }
+
+  $i: $i - 1;
+}
+
+// Media query columns [.col-mob-12, .col-tab-12, .col-desk-12, col-wide-12]
+$j: $grid-columns;
+@while $j > 0 {
+  @each $breakpoint, $name in $device {
+    @include respond-to($breakpoint) {
+      .col-#{$name}-#{$j} {
+        width: $j * $grid-one-column;
+
+        &:before {
+          content: '#{$breakpoint}'
+        }
+      }
+    }
+  }
+
+  $j: $j - 1;
+}

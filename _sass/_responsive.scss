@@ -1,28 +1,18 @@
 // Use: @include respond-to("mobile") { some: code here; }
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "mobile" {
-    @media only screen and (max-width : 767px) { @content; }
+    @media only screen and (max-width : 480px) { @content; }
   }
   @else if $breakpoint == "tablet" {
-    @media only screen and (min-width : 768px) and (max-width : 1024px) { @content; }
+    @media only screen and (min-width : 481px) and (max-width : 768px) { @content; }
   }
   @else if $breakpoint == "desktop" {
-    @media only screen and (min-width : 1224px)  { @content; }
+    @media only screen and (min-width : 769px) and (max-width : 992px) { @content; }
+  }
+  @else if $breakpoint == "wide" {
+    @media only screen and (min-width : 993px) { @content; }
   }
 }
-
-// Grid
-// $columns: 12;
-// $one-col: 100% / 12;
-//
-// @while $columns > 0 {
-//   .col-#{$columns} {
-//     float: left;
-//     width: $one-col * $columns;
-//     box-sizing: border-box;
-//   }
-//   $columns: $columns - 1;
-// }
 
 // Use: @include columns(4); // width: 33.3333%
 // Column count default to: 12.
