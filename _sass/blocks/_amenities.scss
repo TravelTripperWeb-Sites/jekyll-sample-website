@@ -1,0 +1,42 @@
+.amenities {
+  background: #000;
+  min-height: 100px;
+  padding: 0 20px;
+  @extend .clearfix;
+}
+
+.amenities_container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.amenities_image {
+  height: 471px;
+  @include columns(4);
+  background: url('../images/amenities.png') center center;
+  background-size: cover;
+}
+
+.amenities_content {
+  @include columns(8);
+}
+
+.amenities_list {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  list-style: none;
+  width: 80%;
+  margin: 50px auto;
+  padding: 0;
+  color: #959595;
+  @extend .clearfix;
+}
+
+.amenities_list_item {
+  float: left;
+  width: calc(50% - 50px);
+  padding: 0 20px 0 30px;
+  margin-bottom: 40px;
+}

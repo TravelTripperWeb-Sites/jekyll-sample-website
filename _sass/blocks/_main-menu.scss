@@ -1,4 +1,4 @@
-$menu-item-count: 5;
+$menu-item-count: 6;
 $border-height: 5px;
 
 .main-menu {
@@ -7,13 +7,39 @@ $border-height: 5px;
   margin: 0;
   padding-left: $logotype-width;
   padding-right: $social-icons-width;
+  @extend .clearfix;
 
-  @include respond-to("tablet") {
-    padding-right: 0;
-  };
-
-  @include respond-to("mobile") {
+  &.-second {
+    width: auto;
+    padding: 0;
+    background: #000;
     display: none;
+
+    .main-menu_item {
+      float: none;
+      width: auto;
+      min-width: 150px;
+      height: auto;
+      border-width: 2px;
+
+      .main-menu_link {
+        padding: 15px 10px;
+        line-height: 1.4;
+        color: #7d7d7d;
+      }
+
+      &.-active {
+        .main-menu_link {
+          color: #fff;
+        }
+      }
+
+      &:hover {
+        .main-menu_link {
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
@@ -22,6 +48,7 @@ $border-height: 5px;
   height: $header-height;
   width: 100% / $menu-item-count;
   background: #000;
+  word-wrap: break-word;
   border-bottom: 5px solid trasparent;
 
   &.-active {
@@ -30,6 +57,12 @@ $border-height: 5px;
     .main-menu_link {
       font-weight: normal;
       color: #fff;
+    }
+  }
+
+  &:hover {
+    .main-menu.-second {
+      display: block;
     }
   }
 }
@@ -43,7 +76,7 @@ $border-height: 5px;
   letter-spacing: 2px;
   display: block;
   height: 100%;
-  line-height: $header-height - $border-height;
+  line-height: $header-height;
   color: #7d7d7d;
 
   &:hover {

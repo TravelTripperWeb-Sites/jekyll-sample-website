@@ -1,0 +1,27 @@
+.social-icons {
+  float: right;
+  font-size: 0;
+  list-style: none;
+  width: 240px;
+  height: 100%;
+  margin: 21px 0 0;
+  padding: 0;
+  text-align: center;
+
+  &.-footer {
+    float: none;
+    width: 100%;
+    margin-top: 18px;
+  }
+}
+
+.social-icons_item {
+  display: inline-block;
+  width: 15px;
+  margin: 0 10px;
+
+  img {
+    width: 15px;
+    height: auto;
+  }
+}

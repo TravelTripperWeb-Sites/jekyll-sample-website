@@ -1,21 +1,18 @@
 .footer {
-  width: 100%;
-  height: 250px;
+  padding: 50px 20px 45px;
   background: #000;
 }
 
 .footer_container {
-  width: 100%;
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
-
   @extend .clearfix;
 }
 
 .footer_image {
-  @include columns(4);
-  height: 100%;
+  width: auto;
+  min-height: 250px;
   background: url('../images/footer_image.png') center center;
   background-size: cover;
 }
@@ -26,16 +23,11 @@
   @include columns(8);
 }
 
-// TODO separate
-.contact-us {
-  padding-top: 50px;
-  @include columns(6);
-}
-
-.contact-us_title {
+.footer_title {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin: 0 0 24px;
   color: #fff;
 }

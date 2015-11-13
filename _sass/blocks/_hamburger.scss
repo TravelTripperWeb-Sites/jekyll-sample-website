@@ -3,10 +3,7 @@
   width: 100%;
   height: $header-height;
   display: none;
-
-  @include respond-to("mobile") {
-    display: block;
-  };
+  // TODO responsive
 }
 
 .hamburger_button {

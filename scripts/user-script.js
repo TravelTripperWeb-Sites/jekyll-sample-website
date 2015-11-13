@@ -11,22 +11,25 @@ $(function() {
   var header = $('.header');
   var headerBreakpoint = 150;
 
-  function stickyHeader(pagePosition) {
+  function stickyHeader(pagePositionTop, pagePositionLeft) {
     if (header.hasClass('-sticky')) {
-      if (pagePosition < headerBreakpoint) {
+      if (pagePositionTop < headerBreakpoint) {
         header.removeClass('-sticky');
       }
     } else {
-      if(pagePosition > headerBreakpoint) {
+      if(pagePositionTop > headerBreakpoint) {
         header.addClass('-sticky');
       }
     }
+
+    header.css('left', -pagePositionLeft);
   }
 
   // On Scroll -----------------------------------------------------------------
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
+    var scrollLeft = $(this).scrollLeft();
 
-    stickyHeader(scrollTop);
+    stickyHeader(scrollTop, scrollLeft);
   });
 });

@@ -1,21 +1,35 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+/*
+* Helpers, mixins, globals styles & other...
+*/
 @charset "utf-8";
 @import "normalize";
 @import "typo";
+@import "settings";
 @import "helpers";
 @import "responsive";
+@import "grid";
 
-// Header ----------------------------------------------------------------------
-@import "blocks/header/header";
-@import "blocks/header/logotype";
-@import "blocks/header/social-icons";
-@import "blocks/header/main-menu";
-@import "blocks/header/hamburger";
+/*
+* UI elements (input, button, checkboxes, forms, ...);
+*/
+@import "ui/form";
+@import "ui/button";
+@import "ui/text-field";
 
-// Wellcome --------------------------------------------------------------------
-@import "blocks/wellcome/wellcome";
-
-// Footer ----------------------------------------------------------------------
-@import "blocks/footer/footer";
+/*
+* Markup blocks like BEM methodology (some-block, some-block_element, -modifier)
+*/
+@import "blocks/logotype";
+@import "blocks/social-icons";
+@import "blocks/footer";
+@import "blocks/contact-us";
+@import "blocks/links-list";
+@import "blocks/header";
+@import "blocks/main-menu";
+@import "blocks/hamburger";
+@import "blocks/wellcome";
+@import "blocks/services";
+@import "blocks/amenities";

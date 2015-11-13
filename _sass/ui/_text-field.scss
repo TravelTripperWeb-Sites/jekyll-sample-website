@@ -1,0 +1,21 @@
+.text-field {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  width: calc(100% - 24px);
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #959595;
+  background: transparent;
+  color: #fff;
+  resize: vertical;
+  transition: all .2s;
+
+  &:focus {
+    outline: none;
+    border: 1px solid #fff;
+  }
+}

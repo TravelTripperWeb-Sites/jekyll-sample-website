@@ -1,0 +1,10 @@
+$site-max-wdith: 1400px;
+$site-min-width: 1200px;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-width: $site-min-width;
+}
