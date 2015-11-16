@@ -1,0 +1,67 @@
+.about {
+  padding: 0 20px;
+  background: #000;
+}
+
+.about_container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+.about_logotype {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  margin-top: (140px / -2);
+  margin-left: (140px / -2);
+  background: #fff;
+  transform: rotate(45deg);
+  text-align: center;
+
+  img {
+    width: 58px;
+    height: auto;
+    margin-top: 41px;
+    transform: rotate(-45deg);
+  }
+}
+
+.about_item {
+  min-height: 354px;
+  @include columns(6);
+}
+
+.about_image {
+  width: 100%;
+  min-height: 354px;
+
+  &.-first {
+    background: url('../images/about_1.png') center center;
+    background-size: cover;
+  }
+
+  &.-second {
+    background: url('../images/about_2.png') center center;
+    background-size: cover;
+  }
+}
+
+.about_content {
+  width: 70%;
+  margin: 70px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.about_title {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 24px;
+  color: #fff;
+}
