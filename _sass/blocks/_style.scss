@@ -1,0 +1,33 @@
+.style {
+  height: 700px;
+  padding: 0 20px;
+  background: url('../images/comfort_and_style.png') center center;
+  background-size: cover;
+}
+
+.style_container {
+  position: relative;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+.style_content {
+  position: absolute;
+  left: 59px;
+  bottom: 48px;
+  max-width: 244px;
+  padding: 52px 52px 44px;
+  background: #fff;
+  text-align: center;
+}
+
+.style_title {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #000;
+}
