@@ -19,14 +19,18 @@
   margin-top: (140px / -2);
   margin-left: (140px / -2);
   background: #fff;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   text-align: center;
 
   img {
     width: 58px;
     height: auto;
     margin-top: 41px;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 

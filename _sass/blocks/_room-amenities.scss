@@ -38,13 +38,16 @@
     top: 0;
     right: 20px;
     font-size: 28px;
+    -webkit-transition: all .2s;
     transition: all .2s;
   }
 
   &.-on {
     &:after {
       top: 1px;
-      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
     }
   }
 }

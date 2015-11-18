@@ -8,6 +8,7 @@ $social-icons-width: 240px;
   width: 100%;
   height: $header-height;
   margin: 0;
+  -webkit-transition: background .2s;
   transition: background .2s;
   @extend .clearfix;
 
