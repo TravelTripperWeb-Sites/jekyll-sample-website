@@ -25,6 +25,19 @@ $(function() {
     header.css('left', -pagePositionLeft);
   }
 
+  // Room amenities ------------------------------------------------------------
+  var roomAmenitiesButton = $('.room-amenities_button');
+
+  roomAmenitiesButton.on('click', function() {
+    var $this = $(this);
+
+    $this.toggleClass('-on');
+    $this
+      .parent('.room-amenities')
+      .find('.room-amenities_content')
+      .toggleClass('-show');
+  });
+
   // On Scroll -----------------------------------------------------------------
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();

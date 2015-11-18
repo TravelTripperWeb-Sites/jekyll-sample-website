@@ -1,0 +1,72 @@
+.room-amenities_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 50px 80px;
+  display: none;
+
+  &.-show {
+    display: block;
+    background: rgba(#000, .85);
+  }
+}
+
+.room-amenities_button {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border: 0;
+  width: calc(25% - 20px);
+  margin: 0;
+  padding: 10px 30px;
+  color: #fff;
+  background: #000;
+  outline: none;
+
+  &:after {
+    content: '+';
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 28px;
+    transition: all .2s;
+  }
+
+  &.-on {
+    &:after {
+      top: 1px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.room-amenities_title {
+  @extend h2;
+  color: #fff;
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.room-amenities_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @extend .clearfix;
+}
+
+.room-amenities_list_item {
+  font-size: 11px;
+  margin: 0 0 15px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.8
+}

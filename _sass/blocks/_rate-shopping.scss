@@ -1,0 +1,36 @@
+.rate-shopping {
+  text-align: center;
+}
+
+.rate-shopping_container {
+  display: inline-block;
+}
+
+.rate-shopping_item {
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 40px;
+  background: #edecec;
+  color: #000;
+
+  &.-clock {
+    @include icon-before('../images/clock_icon.png', 20px, 20px);
+    &:before {
+      margin-top: -2px;
+    }
+  }
+
+  &.-count {
+    font-size: 15px;
+    letter-spacing: 0;
+    min-width: 50px;
+    padding: 0 12px;
+    background: #df6a5e;
+    color: #fff;
+  }
+}

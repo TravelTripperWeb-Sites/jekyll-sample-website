@@ -1,0 +1,21 @@
+.room-details {
+  position: relative;
+  @extend .clearfix;
+}
+
+.room-details_gallery {
+  @include columns(9);
+}
+
+.room-details_sub-gallery {
+  @include columns(3);
+}
+
+.room-details_sub-gallery_content {
+  padding-top: 60px;
+  padding-left: 20px;
+
+  img {
+    margin-top: 20px;
+  }
+}

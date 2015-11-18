@@ -1,0 +1,22 @@
+.reviews {
+  padding: 0 20px;
+  background: #fff;
+}
+
+.reviews_container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+.reviews_image {
+  @include columns(7);
+  min-height: 450px;
+  background: url('../images/reviews.png') center center;
+  background-size: cover;
+}
+
+.reviews_sidebar {
+  @include columns(5);
+}

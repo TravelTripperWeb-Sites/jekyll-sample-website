@@ -9,3 +9,32 @@
     clear: both;
   }
 }
+
+.text-center {
+  text-align: center;
+}
+
+// Use .some-class { @include icon('..some/url/img.png', 22px, 33px); }
+@mixin icon($path, $width: auto, $height: auto) {
+  display: inline-block;
+  vertical-align: middle;
+  width: $width;
+  height: $height;
+  background: url($path);
+}
+
+@mixin icon-before($path, $width: auto, $height: auto) {
+  &:before {
+    content: '';
+    @include icon($path, $width, $height);
+    margin-right: 8px;
+  }
+}
+
+@mixin icon-after($path, $width: auto, $height: auto) {
+  &:after {
+    content: '';
+    @include icon($path, $width, $height);
+    margin-left: 8px;
+  }
+}
