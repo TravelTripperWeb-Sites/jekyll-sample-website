@@ -1,0 +1,30 @@
+.special-offers {
+  padding: 0 20px;
+  margin: 0 0 40px;
+  @extend .clearfix;
+}
+
+.special-offers_container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.special-offers_item {
+  display: inline-block;
+  width: 357px;
+  margin: 0 20px;
+
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+.special-offers_title {} // TODO
+
+.special-offers_subtitle {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}

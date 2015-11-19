@@ -10,16 +10,18 @@ $description-color: #7d7d7d;
 }
 
 .price_value {
-  float: left;
+  display: inline-block;
   font-size: 45px;
   font-style: italic;
   color: $price-color;
 }
 
 .price_description {
-  float: left;
+  display: inline-block;
   font-size: 16px;
-  padding: 10px 0 0 10px;
+  text-align: left;
+  padding: 10px 0 0 8px;
+  line-height: 1.3;
   color: $price-color;
 
   span {

@@ -16,9 +16,9 @@
 
 // Use: @include columns(4); // width: 33.3333%
 // Column count default to: 12.
-@mixin columns($count, $columns: 12) {
+@mixin columns($count, $columns: 12, $float: left) {
   $one-column: 100% / $columns;
 
-  float: left;
+  float: $float;
   width: $one-column * $count;
 }
