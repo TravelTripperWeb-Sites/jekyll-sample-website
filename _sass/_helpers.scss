@@ -21,6 +21,7 @@
   width: $width;
   height: $height;
   background: url($path);
+  background-repeat: no-repeat;
 }
 
 @mixin icon-before($path, $width: auto, $height: auto) {

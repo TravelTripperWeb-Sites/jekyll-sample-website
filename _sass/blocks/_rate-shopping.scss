@@ -19,9 +19,11 @@
   color: #000;
 
   &.-clock {
-    @include icon-before('../images/clock_icon.png', 20px, 20px);
     &:before {
+      content: '';
+      @include icon('../images/icons/clock.svg', 22px, 22px);
       margin-top: -2px;
+      margin: -2px 15px 0 0;
     }
   }
 

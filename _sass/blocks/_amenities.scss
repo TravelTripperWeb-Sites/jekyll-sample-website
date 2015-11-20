@@ -1,6 +1,6 @@
 .amenities {
   background: #000;
-  min-height: 100px;
+  height: 471px;
   padding: 0 20px;
   @extend .clearfix;
 }
@@ -28,15 +28,53 @@
   text-transform: uppercase;
   list-style: none;
   width: 80%;
-  margin: 50px auto;
+  margin: 90px auto 0;
   padding: 0;
   color: #959595;
   @extend .clearfix;
 }
 
 .amenities_list_item {
+  position: relative;
   float: left;
-  width: calc(50% - 50px);
-  padding: 0 20px 0 30px;
+  width: 40%;
+  padding-left: 40px;
   margin-bottom: 40px;
+  white-space: nowrap;
+
+  &:before {
+    position: absolute;
+    left: 0;
+  }
+
+  &.-suv {
+    @include icon-before('../images/icons/suv.svg', 27px, 12px);
+  }
+  &.-pool {
+    @include icon-before('../images/icons/heated-pool.svg', 8px, 20px);
+  }
+  &.-breakfast {
+    @include icon-before('../images/icons/breakfast.svg', 23px, 17px);
+  }
+  &.-business {
+    @include icon-before('../images/icons/business-service.svg', 12px, 17px);
+  }
+  &.-happy {
+    @include icon-before('../images/icons/happy-hour.svg', 18px, 21px);
+    &:before {
+      top: -4px; // TODO FIX icon mixin
+    }
+  }
+  &.-deliveries {
+    @include icon-before('../images/icons/delivery.svg', 21px, 17px);
+  }
+  &.-internet {
+    @include icon-before('../images/icons/internet.svg', 21px, 15px);
+  }
+  &.-pet {
+    @include icon-before('../images/icons/pet-policy.svg', 17px, 16px);
+  }
+  &.-room {
+    @include icon-before('../images/icons/room-service.svg', 20px, 17px);
+  }
 }

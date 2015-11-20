@@ -13,6 +13,11 @@
     width: 100%;
     margin-top: 18px;
   }
+
+  &.-room {
+    float: none;
+    width: 100%;
+  }
 }
 
 .social-icons_item {
@@ -21,7 +26,6 @@
   margin: 0 10px;
 
   img {
-    width: 15px;
-    height: auto;
+    height: 15px;
   }
 }
