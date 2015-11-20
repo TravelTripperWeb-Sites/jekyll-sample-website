@@ -6,7 +6,13 @@
   <meta name="description" content="">
   <title>Page title</title>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <!-- Google CDN jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Libs -->
+  <script src="{{ "../scripts/libs/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "../scripts/libs/jquery-ui.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "../scripts/libs/angular.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "../scripts/libs/ui-date.js" | prepend: site.baseurl }}"></script>
+
+  <!-- User scripts -->
   <script src="{{ "../scripts/user-script.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "../scripts/rez-trip.js" | prepend: site.baseurl }}"></script>
 </head>

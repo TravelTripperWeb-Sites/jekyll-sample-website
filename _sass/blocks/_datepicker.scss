@@ -1,0 +1,71 @@
+.ui-datepicker {
+  padding: 20px;
+  // margin-top: -268px;
+  margin-left: -148px;
+  background: rgba(#fff, .9);
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #959595;
+  }
+
+  .ui-datepicker-prev {
+    left: 14px;
+    border-left: 2px solid #959595;
+    transform: rotate(-45deg);
+  }
+
+  .ui-datepicker-next {
+    right: 14px;
+    border-right: 2px solid #959595;
+    transform: rotate(45deg);
+  }
+
+  .ui-datepicker-title {
+    margin: 0;
+    line-height: normal;
+  }
+
+  .ui-datepicker-calendar {
+    font-size: 12px;
+
+    th {
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    td a,
+    td span {
+      text-align: center;
+      color: #000;
+    }
+
+    .ui-state-disabled {
+      opacity: .3;
+    }
+
+    .ui-datepicker-today {
+      a {
+        font-weight: bold;
+      }
+    }
+
+    .ui-datepicker-current-day {
+      background: #959595;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ui-datepicker-header {
+  font-family: 'Georgia', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #959595;
+}

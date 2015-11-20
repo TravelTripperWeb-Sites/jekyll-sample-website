@@ -13,6 +13,11 @@
 @import "grid";
 
 /*
+* Libs (jquery-ui, others...)
+*/
+@import "jquery-ui";
+
+/*
 * UI elements (input, button, checkboxes, forms, ...);
 */
 @import "ui/form";
@@ -45,3 +50,4 @@
 @import "blocks/back-to-top";
 @import "blocks/special-offers";
 @import "blocks/room-navigation";
+@import "blocks/datepicker";

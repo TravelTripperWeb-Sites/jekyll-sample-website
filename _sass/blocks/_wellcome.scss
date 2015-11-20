@@ -29,10 +29,10 @@
     padding-left: 50px;
     text-align: center;
     color: #fff;
-    border-color: #fff;
+    border-color: #E6E8E9 !important;
 
     &:focus {
-      background: #fff;
+      background: rgba(#fff, .9);
       color: #000;
 
       & + .wellcome_datepicker_icon {
