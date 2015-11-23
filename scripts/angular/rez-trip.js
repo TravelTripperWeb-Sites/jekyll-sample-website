@@ -7,9 +7,6 @@
       defaultLocale: 'en',
       defaultCurrency: 'USD'
     }))
-    .controller('todo', function($scope) {
-      $scope.datepickerOpts = {
-        minDate: new Date()
-      }
+    .controller('main', function($scope) {
     });
 })();
