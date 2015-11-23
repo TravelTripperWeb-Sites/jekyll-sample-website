@@ -38,6 +38,15 @@ $(function() {
       .toggleClass('-show');
   });
 
+  // Back to top ---------------------------------------------------------------
+  $('.back-to-top').on('click', function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+
+    return false;
+  });
+
   // On Scroll -----------------------------------------------------------------
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();

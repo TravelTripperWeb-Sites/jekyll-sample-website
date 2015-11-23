@@ -1,14 +1,20 @@
 .back-to-top {
   display: block;
+  width: 100%;
   font-size: 11px;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #000;
   padding: 10px 0;
+  border: none;
+  background: none;
 
   &:hover {
     background: #EDECEC;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

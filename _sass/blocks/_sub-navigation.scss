@@ -1,0 +1,24 @@
+.sub-navigation {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sub-navigation_separator {
+  margin: 0 15px;
+}
+
+.sub-navigation_link {
+  text-decoration: none;
+  color: #000;
+
+  &.-active {
+    font-weight: bold;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
