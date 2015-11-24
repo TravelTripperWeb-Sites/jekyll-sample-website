@@ -2,8 +2,8 @@
   angular
     .module('rezTrip', ['ui.date'])
     .value('rt3api', new Rt3Api({
-      portalId: 'themarkerkeywes',
-      hotelId: 'KEYMRK',
+      portalId: 'cupertinoinn',
+      hotelId: 'CASVCH',
       defaultLocale: 'en',
       defaultCurrency: 'USD'
     }))
