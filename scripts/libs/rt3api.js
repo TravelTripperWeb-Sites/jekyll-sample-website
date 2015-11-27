@@ -145,7 +145,7 @@ Rt3Api.prototype.getBrgInfo = function(searchParams) {
                     }).then(function(rsResponse) {
                         if(rsResponse.error_info.error_details.length){
                             if (console && console.error) {
-                                console.error(rsResponse.error_info);
+                                // console.error(rsResponse.error_info);
                             }
                         }
                         if(rsResponse.show_brg) {

@@ -1,24 +1,41 @@
 .sub-navigation {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 1400px;
   text-align: center;
-  margin: 20px 0;
+  @extend .clearfix;
 }
 
-.sub-navigation_separator {
-  margin: 0 15px;
-}
+.sub-navigation_item {
+  display: inline-block;
 
-.sub-navigation_link {
-  text-decoration: none;
-  color: #000;
+  a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
 
-  &.-active {
-    font-weight: bold;
+    &.-active {
+      font-weight: bold;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &:hover {
-    text-decoration: underline;
+  &:after {
+    content: '/';
+    font-size: 11px;
+    margin: 0 15px;
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
   }
 }

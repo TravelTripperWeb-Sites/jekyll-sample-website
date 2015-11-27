@@ -1,11 +1,11 @@
 <section class="room-list">
   <ul class="room-list_container">
-    <li class="room-list_item">
+    <li class="room-list_item" ng-repeat="room in browser.rooms" rt3-room-details="details" data-room-id="[[ room.code ]]">
       <div class="row">
         <div class="col-3">
-          <h2 class="text-center">Deluxe room</h2>
+          <h2 class="text-center">[[ room.name ]]</h2>
           <div class="price">
-            <div class="price_value">$249</div>
+            <div class="price_value">$159</div>
             <div class="price_description">
               .00 / night
               <br>
@@ -29,19 +29,7 @@
               </a>
             </li>
           </ul>
-          <p class="bold">
-            Beautifully appointed Deluxe Rooms features one king, ample work area and large modern
-          </p>
-          <p>
-            All room types are very spacious and include full stocked mini-bars,
-            luxurious bedding, full length mirrors, iHome radio clocks,
-            flat screen TV’s, iron and ironing boards,
-            comfy terry robes and in-room coffee makers.
-          </p>
-          <p>
-            All room types are very spacious and include full stocked mini-bars,
-            luxurious bedding, full length mirrors.
-          </p>
+          <p>[[ room.description ]]</p>
           <div class="text-center">
             <a href="#" class="button">Book now</a>
           </div>
@@ -87,14 +75,14 @@
               </div>
             </div>
             <div class="room-details_gallery">
-              <img src="../images/todo_gallery.png" width="100%" alt="">
+              <img ng-src="[[ room.photos[0].large ]]" width="100%" alt="">
             </div>
-            <div class="room-details_sub-gallery">
+            <!-- <div class="room-details_sub-gallery">
               <div class="room-details_sub-gallery_content">
                 <img src="../images/todo_gallery.png" width="100%" alt="">
                 <img src="../images/todo_gallery.png" width="100%" alt="">
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

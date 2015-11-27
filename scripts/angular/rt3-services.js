@@ -226,7 +226,6 @@ angular.module('rezTrip')
       var self = this;
       var searchParams = rt3Search.getParams();
       var dataRoomId = angular.element('[data-room-id]').data('room-id');
-
       var roomId = { room_id: dataRoomId || $location.path().substr(1) };
 
       self.params = $.extend(searchParams, roomId);
@@ -250,7 +249,11 @@ angular.module('rezTrip')
       details.fetchRoomDetails();
     });
 
-    details.fetchRoomDetails();
+    $timeout(function() {
+      details.fetchRoomDetails();
+    }, 0);
+
+
     return details;
   }])
   .service('rt3RecentBookings', ['$rootScope', '$q', 'rt3api', function($rootScope, $q, rt3api) {

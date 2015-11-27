@@ -47,7 +47,10 @@
   margin: 20px 0 30px;
   color: #000;
 
-  &:hover {
-    text-decoration: underline;
+  &:after {
+    content: '';
+    margin-left: 6px;
+    margin-top: -3px;
+    @include icon('../images/icons/arrow-right.svg', 14px, 14px);
   }
 }
