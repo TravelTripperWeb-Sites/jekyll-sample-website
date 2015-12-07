@@ -1,18 +1,16 @@
+{% assign pages = site.pages | sort:"weight"  %}
+
 <div class="hamburger">
+  <a href="#" class="hamburger_book-now">Book now</a>
   <div class="hamburger_button"></div>
   <ul class="hamburger_menu">
-    <li class="hamburger_menu_item -active">
-      <a class="hamburger_menu_link" href="#">Home</a>
-    </li>
-    <li class="hamburger_menu_item">
-      <a class="hamburger_menu_link" href="#">Rooms</a>
-    </li>
-    <li class="hamburger_menu_item">
-      <a class="hamburger_menu_link" href="#">Special</a>
-    </li>
-    <li class="hamburger_menu_item">
-      <a class="hamburger_menu_link" href="#">Gallery</a>
-    </li>
+    {% for p in pages %}
+      {% if p.title %}
+      <li class="hamburger_menu_item {% if p.url == page.url %} -active{% endif %}">
+        <a class="hamburger_menu_link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
     <li class="hamburger_menu_item">
       <a class="hamburger_menu_link" href="#">Book Now</a>
     </li>

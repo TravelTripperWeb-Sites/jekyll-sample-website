@@ -1,5 +1,5 @@
 .wellcome {
-  min-width: 1200px;
+  min-width: 480px;
   width: 100%;
   height: 700px;
   background: url('../images/hotel_bg.png') center center;
@@ -17,6 +17,16 @@
   position: absolute;
   right: 20px;
   bottom: 20px;
+
+  @include respond-to('mobile') {
+    right: 50%;
+    margin-right: -275px;
+  }
+
+  @include  respond-to('tablet') {
+    right: 50%;
+    margin-right: -275px;
+  }
 }
 
 .wellcome_datepicker_item {

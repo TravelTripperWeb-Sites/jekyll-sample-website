@@ -4,6 +4,20 @@
   height: 100%;
   text-align: center;
 
+  @include respond-to('tablet') {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    margin-left: -120px;
+  }
+
+  @include respond-to('mobile') {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    margin-left: -120px;
+  }
+
   img {
     display: inline-block;
     margin-top: 11px;
@@ -11,7 +25,6 @@
 
   &.-footer {
     float: none;
-    width: 100%;
     height: auto;
     margin-top: 41px;
 

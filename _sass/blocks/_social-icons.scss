@@ -8,10 +8,26 @@
   padding: 0;
   text-align: center;
 
+  @include respond-to('mobile') {
+    display: none;
+  }
+
+  @include respond-to('tablet') {
+    display: none
+  }
+
   &.-footer {
     float: none;
     width: 100%;
     margin-top: 18px;
+
+    @include respond-to('mobile') {
+      display: block;
+    }
+
+    @include respond-to('tablet') {
+      display: block;
+    }
   }
 
   &.-room {

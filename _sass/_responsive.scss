@@ -1,15 +1,12 @@
 // Use: @include respond-to("mobile") { some: code here; }
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "mobile" {
-    @media only screen and (max-width : 480px) { @content; }
+    @media only screen and (max-width : 767px) { @content; }
   }
   @else if $breakpoint == "tablet" {
-    @media only screen and (min-width : 481px) and (max-width : 768px) { @content; }
+    @media only screen and (min-width : 768px) and (max-width : 992px) { @content; }
   }
   @else if $breakpoint == "desktop" {
-    @media only screen and (min-width : 769px) and (max-width : 992px) { @content; }
-  }
-  @else if $breakpoint == "wide" {
     @media only screen and (min-width : 993px) { @content; }
   }
 }

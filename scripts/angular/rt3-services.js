@@ -150,7 +150,6 @@ angular.module('rezTrip')
       this.searchParams = params;
       this.thisDate = date.getFullYear() +'-'+ ('0' + (date.getMonth() + 1)).slice(-2) +'-'+ ('0' + date.getDate()).slice(-2);
 
-
       if(this.searchParams || this.storageContainer) {
         rt3api.availableRooms(this.searchParams || this.storageContainer).then(function(response) {
           $rootScope.$apply(function() {

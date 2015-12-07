@@ -46,8 +46,22 @@ Rt3Api.prototype.getAllRooms = function() {
     return defer;
 };
 
-Rt3Api.prototype.availableRooms = function(params) {
+Rt3Api.prototype.availableRooms = function(searchParams) {
     var path = '/hotels/roomRateList.json';
+    var defaultParams = {
+        hotel_id: this.config.hotelId,
+        portal_id: this.config.portalId,
+        locale: this.config.defaultLocale,
+        currency: this.config.defaultCurrency
+        // arrival_date: '2015-12-12',
+        // departure_date: '2015-12-13',
+        // adults: 2,
+        // children: 0,
+        // rooms: 1
+        // TODO
+    }
+
+    var params = $.extend(defaultParams, searchParams)
 
     return query(path, params);
 };

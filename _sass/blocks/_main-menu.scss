@@ -9,6 +9,14 @@ $border-height: 5px;
   padding-right: $social-icons-width;
   @extend .clearfix;
 
+  @include respond-to('mobile') {
+    display: none;
+  }
+
+  @include respond-to('tablet') {
+    display: none;
+  }
+
   &.-second {
     width: auto;
     padding: 0;
