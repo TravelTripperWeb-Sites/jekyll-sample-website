@@ -4,11 +4,15 @@
   {% for p in pages %}
     {% if p.title %}
       <li class="main-menu_item {% if p.url == page.url %} -active{% endif %}">
-        <a class="main-menu_link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        <a class="main-menu_link" href="{{ p.url | prepend: site.baseurl }}">
+          <span>{{ p.title }}</span>
+        </a>
       </li>
     {% endif %}
   {% endfor %}
   <li class="main-menu_item">
-    <a class="main-menu_link" href="#">Book Now</a>
+    <a class="main-menu_link" href="#">
+      <span>Book Now</span>
+    </a>
   </li>
 </ul>
