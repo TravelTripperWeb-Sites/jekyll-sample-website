@@ -31,6 +31,16 @@
     }
   }
 
+  &.-full-mobile {
+    display: block;
+    width: 100%;
+
+    @include respond-to('desktop') {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
   &.-book-now {
     background: #fff;
     color: #000;

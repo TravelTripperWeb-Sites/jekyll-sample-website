@@ -1,8 +1,18 @@
 .style {
+  min-width: 480px;
   height: 700px;
   padding: 0 20px;
   background: url('../images/comfort_and_style.png') center center;
   background-size: cover;
+  overflow: hidden;
+
+  @include respond-to('mobile') {
+    padding: 0;
+  }
+
+  @include respond-to('tablet') {
+    padding: 0;
+  }
 }
 
 .style_container {
@@ -17,10 +27,20 @@
   position: absolute;
   left: 59px;
   bottom: 48px;
-  max-width: 244px;
+  width: 244px;
   padding: 52px 52px 44px;
   background: #fff;
   text-align: center;
+
+  @include respond-to('mobile') {
+    left: 50%;
+    margin-left: -174px;
+  }
+
+  @include respond-to('tablet') {
+    left: 50%;
+    margin-left: -174px;
+  }
 }
 
 .style_title {

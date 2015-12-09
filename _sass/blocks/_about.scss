@@ -1,6 +1,16 @@
 .about {
   padding: 0 20px;
   background: #000;
+  overflow: hidden;
+  min-width: 480px;
+
+  @include respond-to('mobile') {
+    padding: 0;
+  }
+
+  @include  respond-to('tablet') {
+    padding: 0;
+  }
 }
 
 .about_container {
@@ -31,11 +41,53 @@
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
+
+  @include respond-to('mobile') {
+    top: auto;
+    bottom: 0;
+  }
+
+  @include respond-to('tablet') {
+    top: auto;
+    bottom: 0;
+  }
 }
 
 .about_item {
-  min-height: 354px;
+  height: 354px;
+  // overflow: hidden;
+  // min-height: 354px;
   @include columns(6);
+
+  &.-last {
+    @include respond-to('mobile') {
+      display: none;
+    }
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &.-our-hotels {
+    @include respond-to('mobile') {
+      position: relative;
+      padding-bottom: 150px;
+    }
+    @include respond-to('tablet') {
+      position: relative;
+      padding-bottom: 150px;
+    }
+  }
+
+  @include respond-to('mobile') {
+    @include columns(12);
+    min-height: auto;
+  }
+
+  @include  respond-to('tablet') {
+    @include columns(12);
+    min-height: auto;
+  }
 }
 
 .about_image {
@@ -43,7 +95,7 @@
   min-height: 354px;
 
   &.-first {
-    background: url('../images/about_1.png') center center;
+    background: url('../images/about_1.png') center 100%;
     background-size: cover;
   }
 

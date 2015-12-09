@@ -4,12 +4,10 @@ $grid-gutter: 30px;
 $device: (
   mobile: 'mob',
   tablet: 'tab',
-  desktop: 'desk',
-  wide: 'wide'
+  desktop: 'desk'
 );
 
 .row {
-  width: 100%;
   margin-left: $grid-gutter / -2;
   margin-right: $grid-gutter / -2;
   @extend .clearfix;
@@ -33,16 +31,18 @@ $i: $grid-columns;
   $i: $i - 1;
 }
 
-// Media query columns [.col-mob-12, .col-tab-12, .col-desk-12, col-wide-12]
+// Media query columns [.col-mob-12, .col-tab-12, .col-desk-12]
 $j: $grid-columns;
 @while $j > 0 {
   @each $breakpoint, $name in $device {
     @include respond-to($breakpoint) {
       .col-#{$name}-#{$j} {
         width: $j * $grid-one-column;
+      }
 
-        &:before {
-          content: '#{$breakpoint}'
+      @if $j == 1 {
+        .col-#{$name}-hidden {
+          display: none;
         }
       }
     }
