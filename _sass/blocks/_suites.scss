@@ -1,6 +1,11 @@
 .suites {
   background: #000;
-  padding: 0 20px;
+  padding: 0;
+  overflow: hidden;
+
+  @include respond-to('desktop') {
+    padding: 0 20px;
+  }
 }
 
 .suites_container {
@@ -9,17 +14,21 @@
   max-width: 1400px;
   margin: 0 auto;
   @extend .clearfix;
+
+  [class*="col-"] {
+    float: right;
+  }
 }
 
 .suites_image {
   height: 700px;
-  @include columns(8);
+  width: 100%;
   background: url('../images/suites.png') center center;
   background-size: cover;
 }
 
 .suites_sidebar {
-  @include columns(4);
+  // padding: 20px;
 }
 
 .suites_content {
@@ -30,7 +39,7 @@
   color: #fff;
 
   .button {
-    margin-top: 100px;   
+    margin-top: 100px;
   }
 }
 

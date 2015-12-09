@@ -1,10 +1,12 @@
 .services {
-  padding: 0 20px; //TODO TBD
+  padding: 0 20px;
   background: #fff;
+  overflow: hidden;
+  display: none;
 }
 
 .services_container {
-  max-width: 1400px; //TODO TBD 
+  max-width: 1400px;
   height: 100%;
   margin: 0 auto;
   @extend .clearfix;

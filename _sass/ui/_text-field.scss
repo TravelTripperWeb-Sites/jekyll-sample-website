@@ -1,4 +1,5 @@
 .text-field {
+  -webkit-appearance: none;
   font-family: 'Lato', sans-serif;
   font-size: 13px;
   text-decoration: none;
@@ -9,9 +10,11 @@
   margin: 0;
   padding: 12px;
   border: 1px solid #959595;
+  border-radius: 0;
   background: transparent;
   color: #fff;
   resize: vertical;
+  -webkit-transition: all .2s;
   transition: all .2s;
 
   &:focus {

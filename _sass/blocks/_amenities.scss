@@ -2,7 +2,13 @@
   background: #000;
   height: 471px;
   padding: 0 20px;
+  overflow: hidden;
+  display: none;
   @extend .clearfix;
+
+  @include respond-to('desktop') {
+    display: block;
+  }
 }
 
 .amenities_container {
