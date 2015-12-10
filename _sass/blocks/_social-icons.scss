@@ -13,7 +13,7 @@
   }
 
   @include respond-to('tablet') {
-    display: none
+    display: none;
   }
 
   &.-footer {
@@ -37,6 +37,16 @@
   &.-room {
     float: none;
     width: 100%;
+
+    @include respond-to('mobile') {
+      display: block;
+      text-align: left;
+    }
+
+    @include respond-to('tablet') {
+      display: block;
+      text-align: left;
+    }
   }
 }
 

@@ -25,21 +25,30 @@
   width: 100%;
   background: url('../images/suites.png') center center;
   background-size: cover;
-}
+  box-shadow: 0 0 0 20px #fff inset;
 
-.suites_sidebar {
-  // padding: 20px;
+  @include respond-to('desktop') {
+    box-shadow: none;
+  }
 }
 
 .suites_content {
   max-width: 244px;
   padding: 52px 52px 44px;
-  margin: 100px auto;
+  margin: 20px auto;
   text-align: center;
   color: #fff;
 
+  @include respond-to('desktop') {
+    margin: 100px auto;
+  }
+
   .button {
-    margin-top: 100px;
+    margin-top: 20px;
+
+    @include respond-to('desktop') {
+      margin-top: 100px;
+    }
   }
 }
 

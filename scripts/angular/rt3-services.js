@@ -47,7 +47,7 @@ angular.module('rezTrip')
     return searchParams;
   }])
 
-  .service('rt3Search', ['rt3PortalInfo', 'rt3Browser', 'rt3LocalStorage', 'rt3api', '$rootScope', function(rt3PortalInfo, rt3Browser, rt3LocalStorage, rt3api, $rootScope) {
+  .service('rt3Search', ['rt3PortalInfo', 'rt3LocalStorage', 'rt3api', '$rootScope', function(rt3PortalInfo, rt3LocalStorage, rt3api, $rootScope) {
     function Search() {
       var self = this;
       this.loaded = false;
@@ -135,7 +135,7 @@ angular.module('rezTrip')
     }
   }])
 
-  .service('rt3Browser', ['$rootScope', '$q', 'rt3api', function($rootScope, $q, rt3api) {
+  .service('rt3Browser', ['$rootScope', '$q', 'rt3api', 'rt3Search', function($rootScope, $q, rt3api, rt3Search) {
     function Browser() {
       this.loaded = false;
       this.rooms = [];
@@ -147,7 +147,7 @@ angular.module('rezTrip')
       var date = new Date();
       var self = this;
       this.loaded = false;
-      this.searchParams = params;
+      this.searchParams = params || rt3Search.getParams();
       this.thisDate = date.getFullYear() +'-'+ ('0' + (date.getMonth() + 1)).slice(-2) +'-'+ ('0' + date.getDate()).slice(-2);
 
       if(this.searchParams || this.storageContainer) {

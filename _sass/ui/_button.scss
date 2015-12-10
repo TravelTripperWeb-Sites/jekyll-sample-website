@@ -31,6 +31,16 @@
     }
   }
 
+  &.-full-room-details {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+
+    @include respond-to('mobile') {
+      margin-top: 20px;
+    }
+  }
+
   &.-full-mobile {
     display: block;
     width: 100%;

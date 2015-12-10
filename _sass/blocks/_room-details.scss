@@ -4,7 +4,9 @@
 }
 
 .room-details_gallery {
-  @include columns(9);
+  width: 100%;
+  margin-bottom: 20px;
+  // @include columns(9);
 }
 
 .room-details_sub-gallery {

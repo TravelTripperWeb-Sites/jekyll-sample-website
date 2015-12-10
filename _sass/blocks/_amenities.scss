@@ -19,13 +19,13 @@
 
 .amenities_image {
   height: 471px;
-  @include columns(4);
+  // @include columns(4);
   background: url('../images/amenities.png') center center;
   background-size: cover;
 }
 
 .amenities_content {
-  @include columns(8);
+  // @include columns(8);
 }
 
 .amenities_list {

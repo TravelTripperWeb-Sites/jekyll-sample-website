@@ -1,5 +1,14 @@
 .rate-shopping {
   text-align: center;
+  overflow: hidden;
+}
+
+.rate-shopping_bookings-made {
+  display: none;
+
+  @include respond-to('desktop') {
+    display: inline;
+  }
 }
 
 .rate-shopping_container {

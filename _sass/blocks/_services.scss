@@ -1,8 +1,11 @@
 .services {
   padding: 0 20px;
-  background: #fff;
+  background: #000;
   overflow: hidden;
-  display: none;
+
+  @include respond-to('desktop') {
+    background: #fff;
+  }
 }
 
 .services_container {
@@ -14,16 +17,42 @@
 
 .services_content {
   text-align: center;
-  @include columns(4);
+  padding: 0 20px 50px;
 
   p {
     padding: 0 20px;
+    color: #fff;
+
+    @include respond-to('desktop') {
+      color: #000;
+    }
+  }
+
+  .button {
+    @include respond-to('mobile') {
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+
+    @include respond-to('tablet') {
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
   }
 }
 
 .services_image {
   min-height: 280px;
-  @include columns(4);
 
   &.-first {
     background: url('../images/services-first.png') center center;
@@ -42,5 +71,9 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 50px 0 24px;
-  color: #000;
+  color: #fff;
+
+  @include respond-to('desktop') {
+    color: #000;
+  }
 }

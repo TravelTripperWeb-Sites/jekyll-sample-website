@@ -11,6 +11,22 @@ $device: (
   margin-left: $grid-gutter / -2;
   margin-right: $grid-gutter / -2;
   @extend .clearfix;
+
+  &.-not-indents {
+    margin-left: 0;
+    margin-right: 0;
+
+    [class*="col-"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.-revert {
+    & > [class*="col-"] {
+      float: right;
+    }
+  }
 }
 
 [class*="col-"] {
