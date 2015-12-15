@@ -2,14 +2,14 @@
   <ul class="room-list_container">
     <li class="room-list_item" ng-repeat="room in browser.rooms" rt3-room-details="details" data-room-id="[[ room.code ]]">
       <div class="row -revert">
-        <div class="col-12">
+        <div class="col-12 col-desk-8">
           <div class="room-details_gallery">
             <img ng-src="[[ room.photos[0].large ]]" width="100%" alt="">
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 col-desk-4">
           <div class="row">
-            <div class="col-6 col-mob-12">
+            <div class="col-6 col-desk-12 col-mob-12">
               <h2 class="text-center">[[ room.name ]]</h2>
               <div class="price">
                 <div class="price_value">[[ room.min_average_price ]]</div>
@@ -20,14 +20,61 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-mob-12">
+            <div class="col-6 col-desk-12 col-mob-12">
               <a href="#" class="button -full-room-details">Book now</a>
+              <div class="room-amenities">
+                <button type="button" class="room-amenities_button">Amenities</button>
+                <div class="room-amenities_popup">
+                  <h2 class="room-amenities_popup_title">Resident privileges</h2>
+                  <ul class="room-amenities_list">
+                    <li class="room-amenities_list_item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li class="room-amenities_list_item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li class="room-amenities_list_item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li class="room-amenities_list_item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                    <li class="room-amenities_list_item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-mob-hidden col-tab-hidden">
+              <ul class="social-icons -room">
+                <li class="social-icons_item">
+                  <a href="#">
+                    <img src="../images/icons/facebook-black.svg" alt="">
+                  </a>
+                </li>
+                <li class="social-icons_item">
+                  <a href="#">
+                    <img src="../images/icons/instagram-black.svg" alt="">
+                  </a>
+                </li>
+                <li class="social-icons_item">
+                  <a href="#">
+                    <img src="../images/icons/twitter-black.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+              <p>[[ room.description ]]</p>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-desk-hidden">
           <p>[[ room.description ]]</p>
           <ul class="social-icons -room">
             <li class="social-icons_item">

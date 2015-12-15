@@ -10,6 +10,10 @@
 .sub-navigation_item {
   display: inline-block;
 
+  &.-active {
+    font-weight: bold;
+  }
+
   a {
     font-size: 11px;
     letter-spacing: 2px;

@@ -47,6 +47,13 @@ $(function() {
     return false;
   });
 
+  // Room amenities ------------------------------------------------------------
+  $(document).on('click', '.room-amenities_button', function() {
+    $(this)
+      .siblings('.room-amenities_popup')
+      .toggleClass('-show');
+  });
+
   // On Scroll -----------------------------------------------------------------
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();

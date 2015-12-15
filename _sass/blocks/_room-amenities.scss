@@ -1,75 +1,146 @@
-.room-amenities_content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 50px 80px;
-  display: none;
-
-  &.-show {
-    display: block;
-    background: rgba(#000, .85);
-  }
+.room-amenities {
+  position: relative;
 }
 
 .room-amenities_button {
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
-  text-align: left;
   letter-spacing: 2px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  border: 0;
-  width: calc(25% - 20px);
-  margin: 0;
-  padding: 10px 30px;
-  color: #fff;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
   background: #000;
+  color: #fff;
+  border: 0;
+  padding: 12px 30px;
   outline: none;
+}
 
-  &:after {
-    content: '+';
-    position: absolute;
-    top: 0;
-    right: 20px;
-    font-size: 28px;
-    -webkit-transition: all .2s;
-    transition: all .2s;
-  }
+.room-amenities_popup {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 95.5vw; // TODO
+  min-width: 440px;
+  padding: 0 0 30px;
+  background: rgba(#000, .85);
+  @extend .clearfix;
 
-  &.-on {
-    &:after {
-      top: 1px;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
+  &.-show {
+    display: block;
   }
 }
 
-.room-amenities_title {
-  @extend h2;
+.room-amenities_popup_title {
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 70px 86px 20px;
   color: #fff;
-  font-weight: lighter;
-  margin-top: 0;
 }
 
 .room-amenities_list {
-  list-style: none;
-  margin: 0;
+  margin: 20px 86px 20px 50px;
   padding: 0;
-  @extend .clearfix;
+  list-style: none;
 }
 
 .room-amenities_list_item {
+  position: relative;
   font-size: 11px;
-  margin: 0 0 15px;
-  color: #fff;
   text-transform: uppercase;
-  line-height: 1.8
+  letter-spacing: 2px;
+  line-height: 2;
+  color: #fff;
+  padding: 0 0 0 36px;
+  margin-bottom: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    @include icon('../images/icons/check.svg', 14px, 11px)
+  }
 }
+
+
+
+// .room-amenities_content {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 1;
+//   padding: 50px 80px;
+//   display: none;
+//
+//   &.-show {
+//     display: block;
+//     background: rgba(#000, .85);
+//   }
+// }
+//
+// .room-amenities_button {
+//   font-family: 'Lato', sans-serif;
+//   font-size: 14px;
+//   text-transform: uppercase;
+//   text-align: left;
+//   letter-spacing: 2px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 2;
+//   border: 0;
+//   width: calc(25% - 20px);
+//   margin: 0;
+//   padding: 10px 30px;
+//   color: #fff;
+//   background: #000;
+//   outline: none;
+//
+//   &:after {
+//     content: '+';
+//     position: absolute;
+//     top: 0;
+//     right: 20px;
+//     font-size: 28px;
+//     -webkit-transition: all .2s;
+//     transition: all .2s;
+//   }
+//
+//   &.-on {
+//     &:after {
+//       top: 1px;
+//       -webkit-transform: rotate(45deg);
+//           -ms-transform: rotate(45deg);
+//               transform: rotate(45deg);
+//     }
+//   }
+// }
+//
+// .room-amenities_title {
+//   @extend h2;
+//   color: #fff;
+//   font-weight: lighter;
+//   margin-top: 0;
+// }
+//
+// .room-amenities_list {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   @extend .clearfix;
+// }
+//
+// .room-amenities_list_item {
+//   font-size: 11px;
+//   margin: 0 0 15px;
+//   color: #fff;
+//   text-transform: uppercase;
+//   line-height: 1.8
+// }
