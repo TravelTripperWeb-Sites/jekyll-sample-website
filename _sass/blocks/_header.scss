@@ -9,12 +9,24 @@ $social-icons-width: 240px;
   min-width: 480px;
   height: $header-height;
   margin: 0;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   @extend .clearfix;
+
+  @include respond-to('mobile') {
+    background: #000;
+  }
+
+  @include respond-to('tablet') {
+    background: #000;
+  }
 
   &.-sticky {
     background: #000;
+  }
+
+  &.-hamburger_menu {
+    left: -300px;
   }
 }
 
@@ -23,4 +35,46 @@ $social-icons-width: 240px;
   max-width: 1400px;
   margin: 0 auto;
   @extend .clearfix;
+}
+
+.header_book-now {
+  float: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 15px;
+  height: 58px;
+  line-height: 58px;
+  color: #fff;
+
+  @include respond-to('desktop') {
+    display: none;
+  }
+}
+
+.header_hamburger-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $header-height;
+  height: $header-height;
+  cursor: pointer;
+  background: #000;
+
+  @include respond-to('desktop') {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    width: 28px;
+    height: 3px;
+    border-top: 9px double #fff;
+    border-bottom: 3px solid #fff
+  }
 }

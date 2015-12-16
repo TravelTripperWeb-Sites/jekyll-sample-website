@@ -1,28 +1,49 @@
 $(function() {
-  // Habburger slide -----------------------------------------------------------
-  var hamburgerMenu = $('.hamburger_menu');
-  var hamburgerButton = $('.hamburger_button');
+  var HEADER = $('.header');
 
-  hamburgerButton.on('click.hamburger', function() {
-    hamburgerMenu.slideToggle('400');
+  // Habburger slide -----------------------------------------------------------
+  var hamburgerMenu = $('.hamburger');
+  var hamburgerToggleButtons = '.header_hamburger-button, .hamburger_close';
+
+  $(document).on('click', hamburgerToggleButtons, function() {
+    hamburgerMenu.toggleClass('-show');
+    HEADER.toggleClass('-hamburger_menu');
+    $('body').toggleClass('-hamburger_menu');
+
+    if (HEADER.hasClass('-hamburger_menu')) {
+      HEADER.css('left', '-300px');
+    } else {
+      HEADER.css('left', 0);
+    }
+  });
+
+  // Habburger menu ------------------------------------------------------------
+  var toggleMenuButtonSelector = '.hamburger_toggle-menu'
+
+  $(document).on('click', toggleMenuButtonSelector, function() {
+    var secondMenu = $(this).parent().children('.hamburger_menu.-second');
+
+    $(this).toggleClass('-active');
+
+    if (!!secondMenu) {
+      secondMenu.slideToggle();
+    }
   });
 
   // Sticky header -------------------------------------------------------------
-  var header = $('.header');
   var headerBreakpoint = 150;
 
   function stickyHeader(pagePositionTop, pagePositionLeft) {
-    if (header.hasClass('-sticky')) {
+    if (HEADER.hasClass('-sticky')) {
       if (pagePositionTop < headerBreakpoint) {
-        header.removeClass('-sticky');
+        heHEADERader.removeClass('-sticky');
       }
     } else {
       if(pagePositionTop > headerBreakpoint) {
-        header.addClass('-sticky');
+        HEADER.addClass('-sticky');
       }
     }
-
-    header.css('left', -pagePositionLeft);
+    HEADER.css('left', -pagePositionLeft);
   }
 
   // Room amenities ------------------------------------------------------------

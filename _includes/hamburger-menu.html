@@ -1,15 +1,61 @@
 {% assign pages = site.pages | sort:"weight"  %}
 
 <div class="hamburger">
-  <a href="#" class="hamburger_book-now">Book now</a>
-  <div class="hamburger_button"></div>
-  <ul class="hamburger_menu">
-    {% for p in pages %}
-      {% if p.title %}
-      <li class="hamburger_menu_item {% if p.url == page.url %} -active{% endif %}">
-        <a class="hamburger_menu_link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+  <div class="hamburger_header">
+    <h3 class="hamburger_title">
+      CUPERTINO<br>
+      HOTEL<br>
+      SILICON<br>
+      VALLEY
+    </h3>
+    <span class="hamburger_close">&times;</span>
+  </div>
+  <div class="hamburger_content">
+    <ul class="hamburger_menu" id="hamburger-menu">
+      {% for p in pages %}
+        {% if p.title %}
+        <li class="hamburger_menu_item {% if p.url == page.url %} -active{% endif %}">
+          <a class="hamburger_menu_link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      <li class="hamburger_menu_item">
+        <a href="#" class="hamburger_menu_link">Book now</a>
+        <span class="hamburger_toggle-menu">+</span>
+        <ul class="hamburger_menu -second">
+          <li class="hamburger_menu_item">
+            <a href="#" class="hamburger_menu_link">Second item</a>
+          </li>
+          <li class="hamburger_menu_item -active">
+            <a href="#" class="hamburger_menu_link">Second item long title</a>
+          </li>
+          <li class="hamburger_menu_item">
+            <a href="#" class="hamburger_menu_link">Second item very long title item second</a>
+          </li>
+        </ul>
       </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+    </ul>
+    <ul class="social-icons -hamburger">
+      <li class="social-icons_item">
+        <a href="#">
+          <img src="../images/icons/facebook-black.svg" alt="">
+        </a>
+      </li>
+      <li class="social-icons_item">
+        <a href="#">
+          <img src="../images/icons/instagram-black.svg" alt="">
+        </a>
+      </li>
+      <li class="social-icons_item">
+        <a href="#">
+          <img src="../images/icons/twitter-black.svg" alt="">
+        </a>
+      </li>
+      <li class="social-icons_item">
+        <a href="#">
+          <img src="../images/icons/youtube-black.svg" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

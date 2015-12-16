@@ -48,6 +48,18 @@
       text-align: left;
     }
   }
+
+  &.-hamburger {
+    width: 100%;
+    height: auto;
+
+    @include respond-to('mobile') {
+      display: block;
+    }
+    @include respond-to('tablet') {
+      display: block;
+    }
+  }
 }
 
 .social-icons_item {

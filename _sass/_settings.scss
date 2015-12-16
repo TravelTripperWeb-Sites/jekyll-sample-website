@@ -6,6 +6,15 @@ html, body {
 }
 
 body {
+  position: relative;
+  right: 0;
   min-width: $site-min-width;
   width: 100%;
+  -webkit-transition: right 0.4s;
+  transition: right 0.4s;
+
+  &.-hamburger_menu {
+    right: 300px;
+    overflow: hidden;
+  }
 }
