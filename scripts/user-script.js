@@ -36,7 +36,7 @@ $(function() {
   function stickyHeader(pagePositionTop, pagePositionLeft) {
     if (HEADER.hasClass('-sticky')) {
       if (pagePositionTop < headerBreakpoint) {
-        heHEADERader.removeClass('-sticky');
+        HEADER.removeClass('-sticky');
       }
     } else {
       if(pagePositionTop > headerBreakpoint) {
