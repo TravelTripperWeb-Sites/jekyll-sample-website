@@ -26,7 +26,7 @@ $(function() {
     $(this).toggleClass('-active');
 
     if (!!secondMenu) {
-      secondMenu.slideToggle();
+      secondMenu.stop().slideToggle();
     }
   });
 
