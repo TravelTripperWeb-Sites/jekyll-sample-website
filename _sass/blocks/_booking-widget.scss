@@ -1,0 +1,106 @@
+.booking-widget {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background: #E6E4E5;
+  -webkit-transition: right 0.4s;
+  transition: right 0.4s;
+
+  &.-show {
+    right: 0;
+  }
+}
+
+.booking-widget_header {
+  background: #322C2C;
+  @extend .clearfix;
+}
+
+.booking-widget_close {
+  float: right;
+  font-size: 36px;
+  font-weight: lighter;
+  text-align: center;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.booking-widget_title {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 58px;
+  margin: 0 58px 0 0;
+  line-height: 58px;
+  color: #fff;
+}
+
+.booking-widget_content {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.booking-widget_footer {
+  padding: 20px;
+  color: #AAA8A9;
+
+  p {
+    margin: 0;
+  }
+}
+
+// View Special Rate -----------------------------------------------------------
+.booking-widget_special-rates {
+  margin: 10px 0;
+  background: #fff;
+}
+
+.booking-widget_special-rates_title {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    top: 14px;
+    right: 38px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  &.-show {
+    span {
+      top: 18px;
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+    }
+  }
+}
+
+.booking-widget_special-rates_content {
+  display: none;
+  padding: 10px;
+}
