@@ -31,4 +31,18 @@ $(function() {
     $(this).toggleClass('-show');
     specialRatesContent.stop().slideToggle(400);
   });
+
+
+
+  // TODO
+  $(document).on('click.acord', '.booking-widget_accord_toggler', function() {
+    var $this = $(this);
+
+    $this.toggleClass('-show');
+
+    $this
+      .siblings('.booking-widget_accord_content')
+      .stop()
+      .slideToggle(200);
+  });
 });
