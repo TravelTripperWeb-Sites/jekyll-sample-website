@@ -1,4 +1,4 @@
-<div class="booking-widget">
+<div class="booking-widget" ng-controller="bookingWidget as widget">
   <div class="booking-widget_header">
     <div class="booking-widget_close">&times;</div>
     <h3 class="booking-widget_title">Your Booking</h3>
@@ -17,27 +17,26 @@
         <div class="booking-widget_calendar -error">
           <span class="booking-widget_calendar_icon">Check in</span>
           <div class="booking-widget_calendar_input">
-            <input type="text">
+            <input type="text" value="[[widget.arrival]]">
           </div>
         </div>
       </div>
       <div class="booking-widget_accord_content">
-        todo calendar
+        <div ng-change="widget.chachgeMinDate('departure')" ui-date="[[widget.arrivalOptions]]" ng-model="widget.arrival" ui-date-format="D d M"></div>
       </div>
     </div>
     <p class="booking-widget_calendar_error-text">Please select your check in date</p>
-
     <div class="booking-widget_accord">
       <div class="booking-widget_accord_toggler">
-        <div class="booking-widget_calendar -error">
+        <div class="booking-widget_calendar">
           <span class="booking-widget_calendar_icon">Check out</span>
           <div class="booking-widget_calendar_input">
-            <input type="text">
+            <input type="text" value="[[widget.departure]]">
           </div>
         </div>
       </div>
       <div class="booking-widget_accord_content">
-        todo calendar
+        <div ng-change="widget.chachgeMinDate('arrival')" ui-date="[[widget.departureOptions]]" ng-model="widget.departure" ui-date-format="D d M"></div>
       </div>
     </div>
     <p class="booking-widget_calendar_error-text">Please select your check out date</p>

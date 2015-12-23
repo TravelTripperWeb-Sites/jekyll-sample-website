@@ -151,13 +151,14 @@
 // Rooms, Adults, Children -----------------------------------------------------
 .bookin-widget_parameters {
   margin: 10px 0;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .bookin-widget_parameters_select-group {
   @extend .clearfix;
   font-size: 0;
   text-align: center;
+  margin: 0 -10px;
 
   select {
     display: inline-block;
@@ -336,13 +337,14 @@
     left: 20px;
     width: 17px;
     height: 17px;
-    margin-top: -9px;
+    margin-top: -10px;
     background: url('../images/booking-widget/calendar.svg') no-repeat;
     background-size: 17px 17px;
   }
 }
 
 .booking-widget_calendar_error-text {
+  display: none;
   color: #d64949;
   margin: 5px 0;
   padding: 0 20px;
