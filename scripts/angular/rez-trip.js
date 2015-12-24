@@ -10,32 +10,27 @@
       defaultLocale: 'en',
       defaultCurrency: 'USD'
     }))
-    .controller('bookingWidget', [function() {
+    .controller('bookingWidget', ['$scope', function($scope) {
       var self = this;
 
       this.arrival = null;
       this.departure = null;
-
       this.arrivalOptions = {
-        minDate: 0
+        minDate: 0,
       }
-
       this.departureOptions = {
         minDate: 0
       }
 
       this.chachgeMinDate = function(target) {
+        var today = new Date().getDate();
+        var arr = new Date(self.arrival).getDate();
+        var dep = new Date(self.departure).getDate();
 
-        if (target == 'arrival') {
-          self.arrivalOptions = {
-            minDate: 0
-          }
-        } else {
-          self.departureOptions = {
-            minDate: 0
-          }
+        if (target == 'departure') {
+          self.departureOptions.minDate = (arr - today) + 1;
+          // self.departure = TODO
         }
-
       }
     }]);
 })();

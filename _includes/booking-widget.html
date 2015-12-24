@@ -14,7 +14,7 @@
     <!-- Check In, Check Out Calendars -->
     <div class="booking-widget_accord -first">
       <div class="booking-widget_accord_toggler">
-        <div class="booking-widget_calendar -error">
+        <div class="booking-widget_calendar">
           <span class="booking-widget_calendar_icon">Check in</span>
           <div class="booking-widget_calendar_input">
             <input type="text" value="[[widget.arrival]]">
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="booking-widget_accord_content">
-        <div ng-change="widget.chachgeMinDate('arrival')" ui-date="[[widget.departureOptions]]" ng-model="widget.departure" ui-date-format="D d M"></div>
+        <div ui-date="[[widget.departureOptions]]" ng-model="widget.departure" ui-date-format="D d M"></div>
       </div>
     </div>
     <p class="booking-widget_calendar_error-text">Please select your check out date</p>
@@ -73,11 +73,49 @@
         <h3 class="booking-widget__special-rates_title">View Special Rates</h3>
       </div>
       <div class="booking-widget_accord_content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <br>
-        Suscipit quos accusamus ipsam ut dolores quaerat non aperiam quam illo,
-        excepturi nihil ipsum dolore quo fuga repellendus,
-        magni distinctio necessitatibus quae.
+        <div class="booking-widget_special-rates">
+          <ul class="booking-widget_special-rates_list">
+            <li>
+              <label class="booking-widget_special-rates_radio">
+                <input type="radio" name="name" checked="checked" value="No Thanks">
+                <span class="booking-widget_special-rates_radio-icon"></span>
+                <span class="booking-widget_special-rates_radio_title">No Thanks</span>
+              </label>
+            </li>
+            <li>
+              <label class="booking-widget_special-rates_radio">
+                <input type="radio" name="name" value="No Thanks">
+                <span class="booking-widget_special-rates_radio-icon"></span>
+                <span class="booking-widget_special-rates_radio_title">Offer Code</span>
+
+                <input type="text"> 
+              </label>
+            </li>
+            <li>
+              <label class="booking-widget_special-rates_radio">
+                <input type="radio" name="name" value="No Thanks">
+                <span class="booking-widget_special-rates_radio-icon"></span>
+                <span class="booking-widget_special-rates_radio_title">Businnes Traveller</span>
+              </label>
+            </li>
+            <li>
+              <label class="booking-widget_special-rates_radio">
+                <input type="radio" name="name" value="No Thanks">
+                <span class="booking-widget_special-rates_radio-icon"></span>
+                <span class="booking-widget_special-rates_radio_title">Couples Retreat</span>
+              </label>
+            </li>
+          </ul>
+
+
+          <label class="booking-widget_special-rates_iata">
+            <span>IATA Code</span>
+            <div class="booking-widget_special-rates_iata_input">
+              <input type="text">
+            </div>
+          </label>
+          <a href="#" class="booking-widget_special-rates_button">Enter</a>
+        </div>
       </div>
     </div>
 
