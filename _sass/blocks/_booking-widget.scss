@@ -148,6 +148,7 @@
   font-size: 14px;
   height: 40px;
   line-height: 40px;
+  margin: 0;
   text-align: center;
   cursor: pointer;
   color: #7a7878;
@@ -381,6 +382,22 @@
   &.-first {
     margin-top: 0;
   }
+
+  &.-unindents {
+    margin: 0;
+  }
+}
+
+.booking-widget_accord_title {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #7a7878;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .booking-widget_accord_toggler {

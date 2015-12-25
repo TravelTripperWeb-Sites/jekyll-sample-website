@@ -1,9 +1,19 @@
-<div class="booking-widget" ng-controller="bookingWidget as widget">
+<div class="booking-widget" ng-controller="bookingWidget as widget" rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.search()">
   <div class="booking-widget_header">
     <div class="booking-widget_close">&times;</div>
     <h3 class="booking-widget_title">Your Booking</h3>
   </div>
   <div class="booking-widget_content">
+
+    <!-- View Existing Reservation -->
+    <div class="booking-widget_accord -unindents">
+      <div class="booking-widget_accord_toggler">
+        <h3 class="booking-widget_accord_title">View Existing reservation</h3>
+      </div>
+      <div class="booking-widget_accord_content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ea nostrum animi, inventore, asperiores cumque aliquid tenetur? Rerum, sunt. Similique inventore ipsam, ratione accusantium odit totam est numquam in quas.
+      </div>
+    </div>
 
     <!-- Flexible dates -->
     <a href="https://cupertinoinn.reztrip.com/en/bookings/56792e7a7deb5d007f001726/hotels/CASVCH/calendar?currency=USD" class="booking-widget_flexible-dates">
@@ -17,12 +27,12 @@
         <div class="booking-widget_calendar">
           <span class="booking-widget_calendar_icon">Check in</span>
           <div class="booking-widget_calendar_input">
-            <input type="text" value="[[widget.arrival]]">
+            <input type="text" value="[[search.params.arrival_date | date:'EEE d MMM']]">
           </div>
         </div>
       </div>
       <div class="booking-widget_accord_content">
-        <div ng-change="widget.chachgeMinDate('departure')" ui-date="[[widget.arrivalOptions]]" ng-model="widget.arrival" ui-date-format="D d M"></div>
+        <div id="departure" ng-change="widget.chachgeMinDate('departure')" ui-date="[[widget.arrivalOptions]]" ng-model="search.params.arrival_date" ui-date-format="yy-m-d"></div>
       </div>
     </div>
     <p class="booking-widget_calendar_error-text">Please select your check in date</p>
@@ -31,12 +41,12 @@
         <div class="booking-widget_calendar">
           <span class="booking-widget_calendar_icon">Check out</span>
           <div class="booking-widget_calendar_input">
-            <input type="text" value="[[widget.departure]]">
+            <input type="text" value="[[search.params.departure_date | date:'EEE d MMM']]" >
           </div>
         </div>
       </div>
       <div class="booking-widget_accord_content">
-        <div ui-date="[[widget.departureOptions]]" ng-model="widget.departure" ui-date-format="D d M"></div>
+        <div ui-date="[[widget.departureOptions]]" ng-model="search.params.departure_date" ui-date-format="yy-m-d"></div>
       </div>
     </div>
     <p class="booking-widget_calendar_error-text">Please select your check out date</p>
@@ -45,20 +55,20 @@
     <div class="bookin-widget_parameters">
       <div class="bookin-widget_parameters_content">
         <div class="bookin-widget_parameters_select-group">
-          <select name="rooms" id="rooms">
-            <option value="1">1 Room</option>
+          <select name="rooms" id="rooms" ng-model="search.params.rooms">
+            <option value="1" ng-selected="true">1 Room</option>
             <option value="2">2 Rooms</option>
             <option value="3">3 Rooms</option>
           </select>
 
-          <select name="adults" id="adults">
-            <option value="1">1 Adult</option>
+          <select name="adults" id="adults" ng-model="search.params.adults">
+            <option value="1" ng-selected="true">1 Adult</option>
             <option value="2">2 Adults</option>
             <option value="3">3 Adults</option>
           </select>
 
-          <select name="children" id="children">
-            <option value="0">0 Children</option>
+          <select name="children" id="children" ng-model="search.params.children">
+            <option value="0" ng-selected="true">0 Children</option>
             <option value="1">1 Children</option>
             <option value="2">2 Children</option>
           </select>
@@ -87,22 +97,16 @@
                 <input type="radio" name="name" value="No Thanks">
                 <span class="booking-widget_special-rates_radio-icon"></span>
                 <span class="booking-widget_special-rates_radio_title">Offer Code</span>
-
-                <input type="text"> 
+                <input type="text">
               </label>
             </li>
-            <li>
+          </ul>
+          <ul class="booking-widget_special-rates_list" rt3-special-rates="rates">
+            <li ng-repeat="rate in rates.special_rates">
               <label class="booking-widget_special-rates_radio">
-                <input type="radio" name="name" value="No Thanks">
+                <input type="radio" name="name" value="[[rate.rate_plan_code]]">
                 <span class="booking-widget_special-rates_radio-icon"></span>
-                <span class="booking-widget_special-rates_radio_title">Businnes Traveller</span>
-              </label>
-            </li>
-            <li>
-              <label class="booking-widget_special-rates_radio">
-                <input type="radio" name="name" value="No Thanks">
-                <span class="booking-widget_special-rates_radio-icon"></span>
-                <span class="booking-widget_special-rates_radio_title">Couples Retreat</span>
+                <span class="booking-widget_special-rates_radio_title">[[rate.rate_plan_name]]</span>
               </label>
             </li>
           </ul>
@@ -125,7 +129,9 @@
         <div class="booking-widget_rate_col -title">
           Tonight's<br>Rate
         </div>
-        <div class="booking-widget_rate_col -count">$399</div>
+        <div class="booking-widget_rate_col -count">
+          $ [[ browser.rooms[0].min_average_price ]]
+        </div>
       </div>
       <a href="#" class="booking-widget_rate_button">Book now</a>
     </div>
