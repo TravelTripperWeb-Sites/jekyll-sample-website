@@ -1,0 +1,11 @@
+{
+  "name": "sample-site",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravelTripperWeb-Sites/jekyll-sample-website.git"
+  },
+  "author": "traveltripper.io",
+  "homepage": "https://github.com/TravelTripperWeb-Sites/jekyll-sample-website#readme"
+}
