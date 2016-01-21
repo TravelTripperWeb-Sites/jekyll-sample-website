@@ -1,4 +1,5 @@
 GEM
+  remote: http://rubygems.org/
   specs:
     addressable (2.3.8)
     colorator (0.1)
@@ -6,6 +7,7 @@ GEM
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
     hike (1.2.3)
+    i18n (0.7.0)
     jekyll (3.0.1)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -53,12 +55,16 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     tilt (1.4.1)
+    xkeys (2.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  i18n
+  jekyll
   jekyll-assets
+  xkeys
 
 BUNDLED WITH
    1.10.6

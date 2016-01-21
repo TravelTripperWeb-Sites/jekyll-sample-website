@@ -20,8 +20,5 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-default_lang: 'en'
-languages: ['en']
-
 gems:
 - jekyll-assets
