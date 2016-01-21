@@ -6,19 +6,5 @@
   <meta name="description" content="">
   <title>Page title</title>
   {% stylesheet application %}
-  <!-- Libs -->
-  <script src="{{ "../scripts/libs/jquery.min.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/libs/jquery-ui.min.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/libs/angular.min.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/libs/ui-date.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/libs/rt3api.js" | prepend: site.baseurl }}"></script>
-  <!-- User scripts -->
-  <script src="{{ "../scripts/angular/rez-trip.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/angular/rt3-services.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/angular/rt3-directives.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/angular/rt3-filters.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "../scripts/user-script.js" | prepend: site.baseurl }}"></script>
-
-  <!-- Booking sidebar -->
-  <script src="{{ "../scripts/booking-widget.js" | prepend: site.baseurl }}"></script>
+  {% javascript application %}
 </head>
