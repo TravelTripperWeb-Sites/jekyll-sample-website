@@ -9,8 +9,9 @@
   "author": "traveltripper.io",
   "homepage": "https://github.com/TravelTripperWeb-Sites/jekyll-sample-website#readme",
   "dependencies": {
-    "angular": "^1.4.8",
-    "jquery": "^1.11.3",
-    "jquery-ui": "^1.10.5"
+    "angular": "1.4.8",
+    "angular-rt3app": "^2.0.1",
+    "jquery": "1.12.0",
+    "rt3api": "^1.0.0"
   }
 }

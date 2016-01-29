@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('rezTrip', ['ui.date'], function($interpolateProvider) {
+    .module('rezTrip', ['ui.date', 'rt3app'], function($interpolateProvider) {
       $interpolateProvider.startSymbol('[[');
       $interpolateProvider.endSymbol(']]');
     })
